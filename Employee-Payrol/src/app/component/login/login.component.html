@@ -1,0 +1,36 @@
+
+<div class="login-container">
+    
+    <div class="login-content">
+     <h5  style="margin-bottom:20px;text-align: center;font-size:23px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Envision Integrated Services Pvt Ltd</h5>
+      <!-- <mat-toolbar class="login-toolbar" color="primary">My App</mat-toolbar> -->
+      <img class="card-img-top" src="assets/images/download.png" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;height:120px;padding-bottom: 30x;">
+     
+      <mat-card style="margin-top:10px;">
+        <h5  style="margin-bottom:10px;text-align: center;font-size:23px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Employee Login</h5>
+        <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+          <mat-form-field>
+            <mat-icon matPrefix>person_outline</mat-icon>
+            <input autofocus type="text" matInput placeholder="Username" formControlName="username">
+            <mat-error *ngIf="!loginForm.controls['username'].valid && loginForm.controls['username'].touched">
+            User Name is required
+             </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field style="margin-bottom: 20px;">
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input type="password"  matInput placeholder="Password" formControlName="password">
+            <mat-error *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">
+            password is required
+               </mat-error>
+          </mat-form-field>
+          <div class="forgotpassword" >
+          <a  href="#" style="color:red;  margin-top:20px">Forgot password?</a>
+          <!-- <a  href="#" style="color:blue;text-decoration: underline;float:right; ">Register</a> -->
+          </div>
+  
+          <button type="submit" mat-raised-button color="info" style="background-color: #08849C">Login</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+
+<div class="login-container">
+    
+    <div class="login-content">
+     <h5  style="margin-bottom:20px;text-align: center;font-size:23px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Envision Integrated Services Pvt Ltd</h5>
+      <!-- <mat-toolbar class="login-toolbar" color="primary">My App</mat-toolbar> -->
+      <img class="card-img-top" src="assets/images/download.png" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;height:120px;padding-bottom: 30x;">
+     
+      <mat-card style="margin-top:10px;">
+        <h5  style="margin-bottom:10px;text-align: center;font-size:23px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Reset password</h5>
+        <form [formGroup]="resetForm" novalidate (ngSubmit)="onSubmit()">
+          <mat-form-field>
+           
+            <input autofocus type="text" matInput placeholder="OldPassword" formControlName="Oldpassword">
+            <mat-error *ngIf="!resetForm.controls['Oldpassword'].valid && resetForm.controls['Oldpassword'].touched">
+         Old Password is required
+             </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field style="margin-bottom: 20px;">
+           
+            <input type="password"  matInput placeholder="NewPassword" formControlName="Newpassword">
+            <mat-error *ngIf="!resetForm.controls['Newpassword'].valid && resetForm.controls['Newpassword'].touched">
+            New Password is required
+               </mat-error>
+          </mat-form-field>
+
+          <mat-form-field style="margin-bottom: 20px;">
+           
+            <input type="password"  matInput placeholder="ConfirmPassword" formControlName="Confirmpassword">
+            <mat-error *ngIf="!resetForm.controls['Confirmpassword'].valid && resetForm.controls['Confirmpassword'].touched">
+            Confirm Password is required
+               </mat-error>
+          </mat-form-field>
+          <!-- <div class="forgotpassword" >
+          <a  href="#" style="color:red;  margin-top:20px">Forgot password?</a>
+         <a  href="#" style="color:blue;text-decoration: underline;float:right; ">Register</a> 
+          </div>
+   -->
+          <button type="submit" mat-raised-button color="info" style="background-color: #08849C">Submit</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+
