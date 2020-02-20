@@ -1,0 +1,222 @@
+
+<div>  
+   
+    YEAR 
+    <select  [(ngModel)]="YearHeader.name" (ngModelChange)="SearchYear(YearHeader.name)">  
+        <option *ngFor="let prod of YearHeader">{{prod.name}} </option>  
+    </select> 
+ 
+    MONTH
+    <select  [(ngModel)]="MonthHeader.name" (ngModelChange)="SearchMonth(MonthHeader.name)">  
+         <option *ngFor="let prod of MonthHeader">{{prod.name}} </option>  
+     </select> 
+    
+  
+  </div>  
+  <div>  
+  <!-- <h4>Year Details:</h4>   -->
+  <table class="table table-bordered">  
+
+
+  <tr class="yh" >   
+<!--   
+    <th >DATES</th>
+    <th >PROJECT CODE </th> 
+     <th >INTIME</th>  
+     <th >OUTTIME</th>
+      <th >DURATION</th> 
+       <th >TYPE OF LEAVES</th> 
+       <th  >TASK</th>
+       <th >EDIT</th>
+       <th >SUBMIT</th>
+
+
+       <th >PM(Hours)</th>
+       
+       <th >STATUS</th>
+       <th >REMARKS</th>  -->
+       <td *ngIf="MonthHeader.name"  style="font-weight: bold;" >  
+      DATES 
+        </td> 
+        <td *ngIf="MonthHeader.name" >  
+            PROJECT CODE
+        </td> 
+        <td *ngIf="MonthHeader.name">  
+            INTIME
+        </td> 
+        <td *ngIf="MonthHeader.name" >  
+            OUTTIME
+        </td> 
+         <td *ngIf="MonthHeader.name" >  
+            DURATION
+        </td> 
+        <td *ngIf="MonthHeader.name" >  
+            TYPE OF LEAVES
+        </td> 
+        <td *ngIf="MonthHeader.name" >  
+            TASK
+         </td> 
+         <td *ngIf="MonthHeader.name" >  
+            EDIT
+         </td> 
+         <td *ngIf="MonthHeader.name" >  
+         SUBMIT
+         </td>
+         <td *ngIf="MonthHeader.name" >  
+            PM(Hours)
+          </td>
+          <td *ngIf="MonthHeader.name" >  
+            STATUS
+            </td>
+          <td *ngIf="MonthHeader.name" >  
+                REMARKS
+          </td> 
+                              
+                              
+
+  
+  </tr>  
+  <tr  *ngFor="let Prod of MonthDetails; let i=index ">  
+
+    <td style="padding-top:35px;">{{Prod.dates}}</td>  
+                
+    <td><input type="text"></td>  
+    <td><input type="text"></td>  
+    <td><input type="text"></td>  
+    <td><input type="text"></td>
+  
+    <td ><select class="leaves">
+     
+        <option> </option>
+        <option>Present</option>
+
+
+
+
+        
+      <option>Casual Leave </option>
+      <option>Paid Leave </option>
+      <option>Loss of pay </option>
+      <option>Comp off Leave </option>
+    </select></td>
+    <td ><input type="text" style="width:190px" ></td>  
+   <td><button style="margin-top:20px; margin-left:3px;" type="button" class="btn btn-outline-info">Edit</button></td>
+   <td ><button  style="margin-top:20px; margin-left:3px;"  class="bun" type="button" class="btn btn-outline-success">Submit</button></td>
+    
+    <td><input type="text"></td>  
+    <td><select class="leaves">
+        <option> </option>
+      <option>Approval</option>
+      <option>Rejected </option>
+    
+    </select></td> 
+    <td><input type="text" ></td>  
+  </tr>  
+  
+  </table>  
+  </div>  
+  
+  
+  <div>  
+    <!-- <h4>Year Details:</h4>   -->
+    <table class="table table-bordered">  
+    <tr class="yh" >   
+    <!-- <th>S.NO</th> <th>Month</th>  
+    
+    <th> NO of days</th><th>APL</th><th>ACL</th><th>NLM</th><th>EPL</th><th>PLCF</th>
+    <th>APL</th><th>ECL</th><th>CLF</th> <th>Total CO</th><th>NPD</th><th>LP</th><th>NPD</th><th>Remarks</th> -->
+    <td *ngIf="YearHeader.name" style="font-weight: bold;" >  
+     S.NO
+     </td> 
+
+     <td *ngIf="YearHeader.name" >  
+      MONTH
+     </td>
+
+     <td *ngIf="YearHeader.name" >  
+       NO OF DAYS
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+       APL
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+        ACL
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+        NLM
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+        EPL
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+        PLCF
+      </td> 
+
+      <td *ngIf="YearHeader.name" >  
+        APL
+      </td> 
+
+      <td *ngIf="YearHeader.name" >  
+        ECL
+      </td> 
+
+      <td *ngIf="YearHeader.name" >  
+        CLF
+      </td> 
+
+      <td *ngIf="YearHeader.name" >  
+        TOTAL CO
+      </td> 
+
+      <td *ngIf="YearHeader.name" >  
+        NPD
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+        LP
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+        NPD
+      </td> 
+      <td *ngIf="YearHeader.name" >  
+       REMARKS
+      </td> 
+
+
+
+
+
+
+
+
+
+    </tr>  
+    <tr  *ngFor="let Prod of YearDetails; let i=index ">  
+      <td>{{i+1}}</td>
+     
+    <td >{{Prod.month}}</td>  
+    <td></td> 
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    
+    </tr>  
+    
+    </table>  
+    </div>  
+    
+    
+    
+    
+    
+  
+  

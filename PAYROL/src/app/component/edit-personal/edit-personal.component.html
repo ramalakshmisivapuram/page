@@ -1,0 +1,331 @@
+
+
+<mat-sidenav-container fullscreen>
+  
+    <mat-sidenav mode="side" #sidenav opened position="start">
+        <img src="assets\img\download.png" >
+        <ul>
+          
+     <li><a routerLink="/home-tabs" >COMPANY PROFILE</a></li>
+     <li><a routerLink="/hr-details">EMPLOYEES</a></li>
+     <li><a routerLink="/joining-tabs" >PERSONAL PROFILE</a></li>
+     <li><a routerLink="/attendence" >PROFESSIONAL PROFILE</a></li>
+    
+     <li><a href="" >DEPARTMENT</a></li>
+     <li><a href="" >SEPARATION</a></li>
+     <li><a href="" >TICKET</a></li>
+     
+     <!-- <li><a routerLink="/salary" > PAYSLIP COMPONENT </a></li>
+     <li><a href="" >APPOINTMENT</a></li>
+     <li><a routerLink="/payslip" >PAYROLL</a></li>
+     <li><a href="" >APPRISAL</a></li>
+     <li><a href="" >SEPARATION</a></li>
+     <li><a href="" >RELIVING</a></li> -->
+    
+    </ul>
+  
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar style="background-color: #08849C;" >
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon style="color: white;">menu</mat-icon>
+        </button>
+        <h6 style="color: white;">
+         
+          ENVISION INTEGRATED SERVICES PVT.LTD </h6>
+ 
+<!-- 
+        <span class="toolbar-spacer"></span>
+        <button mat-raised-button style="background-color:white;"
+  matBadge="3" matBadgePosition="after" matBadgeColor="accent">
+NOTIFICATIONS
+</button>
+<button  routerLink="/login "  mat-raised-button style=margin-left:10px; >
+LOGIN
+</button> -->
+<button  routerLink="/login"  mat-raised-button style="margin-left:580px;background-color: #08849C;" >
+  LOGOUT
+  </button>
+<span class="toolbar-spacer"></span>
+       
+      </mat-toolbar>
+      <div class="main-content" style="margin-top:60px;"> 
+
+          
+<div class="container" > 
+  <h5 style="color:red;padding-left:5px;">PERSONAL DETAILS</h5>  
+    <div class="row">
+            <div class="col-sm-6">
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="form">
+        <table>
+                <tr>
+
+               <td>
+                <mat-form-field class="form-element" appearance="outline">
+                                <mat-label>First Name</mat-label>
+                    <input matInput placeholder="Enter Frist Name" formControlName="firstname">
+                    <mat-error *ngIf="!formGroup.controls['firstname'].valid && formGroup.controls['firstname'].touched">
+                               First Name is required
+                              </mat-error>
+                  </mat-form-field></td>
+                  <td>
+
+                  <mat-form-field class="form-element" appearance="outline">
+                                <mat-label>Last Name </mat-label>
+                    <input matInput placeholder="Enter Last Name" formControlName="lastname">
+                    <mat-error *ngIf="!formGroup.controls['lastname'].valid && formGroup.controls['lastname'].touched">
+                                Last Name is required
+                               </mat-error>
+                  </mat-form-field></td>
+                  </tr>
+                  <tr>
+
+                                <td> <mat-form-field class="form-element" appearance="outline">
+                               <mat-select placeholder="Gender" formControlName="gender">
+                                                <mat-option ></mat-option>
+                                        <mat-option value="male">Male</mat-option>
+                                        <mat-option value="female">Female</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="!formGroup.controls['gender'].valid && formGroup.controls['gender'].touched">
+                                               Gender is required
+                                               </mat-error>
+                        </mat-form-field></td>
+
+
+                       <td><mat-form-field class="form-element" appearance="outline">
+                                        <mat-label> Age </mat-label>
+                            <input matInput placeholder="Age" formControlName="age">
+                            <mat-error *ngIf="!formGroup.controls['age'].valid && formGroup.controls['age'].touched">
+                                        Age is required
+                                       </mat-error>
+                          </mat-form-field><td>
+                          </tr>
+
+                          <tr>
+                         <td><mat-form-field  class="form-element" appearance="outline">
+                                        <mat-label> Date of Birth</mat-label>
+                                        <input matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="date">
+                                        <mat-error *ngIf="!formGroup.controls['date'].valid && formGroup.controls['date'].touched">
+                                                       Select date of Birth
+                                                       </mat-error>
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field></td>
+
+                                     
+
+                                       <td><mat-form-field  class="form-element" appearance="outline">
+                                        <mat-label>Select your blood group</mat-label>
+                                <mat-select placeholder="Blood group" formControlName="blood" >
+                                        <mat-option value="o">O+</mat-option>
+                                        <mat-option value="onev">O-</mat-option>
+                                        <mat-option value="A">A+</mat-option>
+                                        <mat-option value="Anev">A-</mat-option>
+                                        <mat-option value="B">B+</mat-option>
+                                        <mat-option value="Bnev">B-</mat-option>
+                                        <mat-option value="AB">AB+</mat-option>
+                                        <mat-option value="ABnev">AB-</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="!formGroup.controls['blood'].valid && formGroup.controls['blood'].touched">
+                                               Blood group is required
+                                               </mat-error>
+
+                            </mat-form-field></td>
+                            </tr>
+
+
+                           <tr>
+                            <td><mat-form-field  class="form-element" appearance="outline">
+                                        <mat-select placeholder="Marital Status" formControlName="martial">
+                                            <mat-option value="Yes">Yes</mat-option>
+                                            <mat-option value="No">No</mat-option>
+                                        </mat-select>
+
+                                        <mat-error *ngIf="!formGroup.controls['martial'].valid && formGroup.controls['martial'].touched">
+                                                        martial status  is required
+                                                       </mat-error>
+                                 </mat-form-field></td>
+
+                                 <td><mat-form-field class="form-element" appearance="outline">
+                                                <mat-label>Phone Number</mat-label>
+                                                <input matInput placeholder="Phone Number" formControlName="phonenumber">
+                                                <mat-error *ngIf="!formGroup.controls['phonenumber'].valid && formGroup.controls['phonenumber'].touched">
+                                                                Required field, must be 10 numbers.
+                                                              </mat-error>
+                                        </mat-form-field></td>
+                                        </tr>
+
+
+                                      
+<tr>
+
+  <td><mat-form-field class="form-element" appearance="outline">
+                <mat-label>email form field</mat-label>
+    <input matInput placeholder="Emailaddress" formControlName="email" >
+    <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
+      {{ getErrorEmail() }}
+    </mat-error>
+  </mat-form-field></td>
+
+  <td><mat-form-field class="form-element" appearance="outline">
+                <mat-label>Emergency Contact No </mat-label>
+                <input matInput placeholder="Emergency Contact No " formControlName="emergencynum">
+                <mat-error *ngIf="!name.valid && name.touched">
+                              {{titleAlert}}
+                                </mat-error>
+
+</mat-form-field></td>
+</tr>
+
+<tr>
+<td><mat-form-field class="form-element" appearance="outline">
+                <mat-label for ="Permanent">Permanent Address</mat-label>
+                <input matInput id="Permanent" placeholder="Enter Your Permanent Address" formControlName="permanentaddress">
+                <mat-error *ngIf="!formGroup.controls['permanentaddress'].valid && formGroup.controls['permanentaddress'].touched">
+                             permanent address is required
+                               </mat-error>
+
+</mat-form-field></td>
+
+<td><mat-form-field class="form-element" appearance="outline">
+                <mat-label for="Present">Present Address</mat-label>
+                <input matInput placeholder="Enter Your Present Address"  formControlName="presentaddress">
+                <mat-error *ngIf="!formGroup.controls['presentaddress'].valid && formGroup.controls['presentaddress'].touched">
+                                present address is required
+                               </mat-error>
+               
+ </mat-form-field></td>
+</tr>
+ 
+<tr>
+ <td><mat-form-field class="form-element" appearance="outline">
+                <mat-label>PAN  Card No</mat-label>
+               
+                <input matInput placeholder="Enter Your Pan Card No "  formControlName="pannumber">
+
+                <mat-error *ngIf="!formGroup.controls['pannumber'].valid && formGroup.controls['pannumber'].touched">
+                    Required field, must be 10 numbers.
+                               </mat-error>
+        </mat-form-field></td>
+        <td>
+            <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+            <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+            <mat-error *ngIf="!formGroup.controls['file2'].valid && formGroup.controls['file2'].touched">
+               required field
+               </mat-error> 
+             </td>
+  </tr>
+  <tr>
+      <td><mat-form-field class="form-element" appearance="outline">
+          <mat-label>UAN / PF A/c No</mat-label>
+         
+          <input matInput placeholder="Enter Your Pan Card No "  formControlName="uan">
+    
+          <mat-error *ngIf="!formGroup.controls['uan'].valid && formGroup.controls['uan'].touched">
+              Required field, must be 12 numbers.
+                         </mat-error>
+  </mat-form-field></td>
+  <td>
+
+        <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+        <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+      <mat-error *ngIf="!formGroup.controls['file1'].valid && formGroup.controls['file1'].touched">
+          required field
+          </mat-error>
+                          
+                       </td>
+ 
+  </tr>
+        <tr>
+      <td><mat-form-field class="form-element" appearance="outline">
+          <mat-label>Aadhar  Card No</mat-label>
+         
+          <input matInput placeholder="Enter Your Aadhar Card No  "  formControlName="adharnumber">
+    
+          <mat-error *ngIf="!formGroup.controls['adharnumber'].valid && formGroup.controls['adharnumber'].touched">
+              Required field, must be 12 numbers.
+                         </mat-error>
+  </mat-form-field></td>
+  <td>
+
+        <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+        <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+      <mat-error *ngIf="!formGroup.controls['file'].valid && formGroup.controls['file'].touched">
+          required field
+          </mat-error>
+                          
+                       </td>
+ 
+  </tr>
+  <tr>
+      <td><mat-form-field class="form-element" appearance="outline">
+          <mat-label>Driving licence  Card No</mat-label>
+         
+          <input matInput placeholder="Enter Your Driving licence Card No "  formControlName="drivinglicense">
+
+          <mat-error *ngIf="!formGroup.controls['drivinglicense'].valid && formGroup.controls['drivinglicense'].touched">
+              Required field, must be 16 numbers.
+                         </mat-error>
+  </mat-form-field></td>
+
+  <td>
+    <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+    <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+      <mat-error *ngIf="!formGroup.controls['file3'].valid && formGroup.controls['file3'].touched">
+          required field
+          </mat-error>
+                            
+                       </td>
+ 
+  </tr>
+
+  <!-- <div class="form-element">
+    <button mat-raised-button color="primary" type="submit" class="button">Save</button>
+  </div> -->
+</table>
+</form>
+</div>
+<div class="col-sm-3">
+    <label style="color: steelblue; margin-top: 1px;">Upload Your Image</label>
+    <span style="color: red;">*</span>
+    <div >
+    <img [src]="imgURL"  height="150" width="150" style="border: 1px solid black;" *ngIf="imgURL" >
+    <input #file type="file" accept="image/gif, image/jpeg, image/png" name="file" (change)="preview(file.files)"/>
+  </div>
+</div>
+</div>
+
+    <!-- <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Login Details</h5>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> --
+                        <div class="card-text">
+                                      <div *ngFor="let use of user">
+
+                                                      <p>User Id: {{use.username}}</p>
+                                                      <!-- <p>Password : {{use.password}}</p> --
+                                       </div>
+                      </div>
+<!--                       
+                        <a href="#" class="card-link">Another link</a> --
+                      </div>
+                    </div>
+
+</div> -->
+
+<table class="table table-bordered" style="margin-top:10px;" >
+        
+<button  class="btn btn-outline-info" (click)="selectNext1(matgroup)"  style="margin-left:250px;">PREVIOUS</button>
+
+
+<button  class="btn btn-outline-success"  style="margin-left:10px;" >SAVE</button>
+
+<button  class="btn btn-outline-info" (click)="selectNext(matgroup)"  style="margin-left:10px;" >NEXT</button>
+
+</table>
+</div>
+</div>
+</mat-sidenav-content>
+</mat-sidenav-container>

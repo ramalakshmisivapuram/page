@@ -1,0 +1,112 @@
+
+
+
+
+
+<mat-sidenav-container fullscreen>
+  
+    <mat-sidenav mode="side" #sidenav opened position="start">
+        <img src="assets/img/download.png" >
+        <ul>
+          
+     <li><a routerLink="/home-tabs" >COMPANY PROFILE</a></li>
+     <li><a routerLink="/hr-details">EMPLOYEES</a></li>
+     <li><a routerLink="/joining-tabs" >PERSONAL PROFILE</a></li>
+     <li><a routerLink="/attendence" >PROFESSIONAL PROFILE</a></li>
+   
+     <li><a href="" >DEPARTMENT</a></li>
+     <li><a href="" >SEPARATION</a></li>
+     <li><a href="" >TICKET</a></li>
+     
+     <!-- <li><a routerLink="/salary" > PAYSLIP COMPONENT </a></li>
+     <li><a href="" >APPOINTMENT</a></li>
+     <li><a routerLink="/payslip" >PAYROLL</a></li>
+     <li><a href="" >APPRISAL</a></li>
+     <li><a href="" >SEPARATION</a></li>
+     <li><a href="" >RELIVING</a></li> -->
+    
+    </ul>
+  
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar style="background-color: #08849C;" >
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon style="color: white;">menu</mat-icon>
+        </button>
+        <h6 style="color: white;">
+         
+          ENVISION INTEGRATED SERVICES PVT.LTD </h6>
+ 
+
+        <span class="toolbar-spacer"></span>
+        <!-- <button mat-raised-button style="background-color:white;"
+  matBadge="3" matBadgePosition="after" matBadgeColor="accent">
+NOTIFICATIONS
+</button>
+<button  routerLink="/login "  mat-raised-button style=margin-left:10px; >
+LOGIN
+</button> -->
+<button  routerLink="/login"  mat-raised-button style="margin-left:580px;background-color: #08849C;" >
+  LOGOUT
+  </button>
+<span class="toolbar-spacer"></span>
+       
+      </mat-toolbar>
+      <div class="main-content" style="margin-top:60px;"> 
+
+      <h5 style="color:red">FAMILY</h5>
+             <div>
+                 
+                <table class="TFtable">  
+  
+                    
+                  <tr >   
+                    <th><input type="checkbox"></th>
+                  <th>NAME</th><th>RELATIONSHIP </th>  <th>D.O.B</th>  <th>AGE</th> <th>OCCUPATION</th> <th>CONTACT</th> 
+                 
+                   <!-- <th><button mat-raised-button   style="background-color: #3AB1CF; color: white; margin-right:3px;" (click)="addrelationship()">ADD</button>
+                    </th>
+                    <th><button mat-raised-button   color="warn" (click)="removerelationship(i)">REMOVE</button></th>  -->
+                  </tr>  
+                  
+                  <tr  *ngFor="let relationship of relationship; let i = index;">  
+                 
+                 
+                <td><input type="checkbox"></td>
+                  <td><input type="text"  [(ngModel)]="relationship.name"  name="name"></td>  
+                  <td><input type="text"   [(ngModel)]="relationship.relation"  name="relation"></td>  
+                  
+                  <td><input type="text" [(ngModel)]="relationship.dob"  name="dob"></td>
+                  <td><input type="text"  [(ngModel)]="relationship.age" name="age"></td>  
+  
+  
+                  <td><input type="text" [(ngModel)]="relationship.occuption" name="occuption" ></td>
+                  <td><input type="text" [(ngModel)]="relationship.contact" name="contact" ></td>
+                
+                
+                
+                  
+                  
+                  </tr>  
+                  
+                  </table> 
+                 
+              </div>
+              <table class="table table-bordered" style="margin-top:10px;" >
+              
+                <button  class="btn btn-outline-info" (click)="selectNext1(matgroup)"  style="margin-left:250px;">PREVIOUS</button>
+                <button  class="btn btn-outline-info"  style="margin-left:10px;"  (click)="addrelationship()">ADD</button>
+  
+                <button  class="btn btn-outline-danger"   style="margin-left:10px;" (click)="removerelationship(i)">DELETE</button>
+               
+                <button  class="btn btn-outline-success"  style="margin-left:10px;" >SAVE</button>
+               
+                  <button  class="btn btn-outline-info" (click)="selectNext(matgroup)"  style="margin-left:10px;" >NEXT</button>
+               
+                </table>
+              
+               
+</div>
+</mat-sidenav-content>
+</mat-sidenav-container>

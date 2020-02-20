@@ -1,0 +1,113 @@
+<div>  
+        Year
+        <select  [(ngModel)]="YearHeader.name" (ngModelChange)="SearchYear(YearHeader.name)">  
+             <option *ngFor="let prod of YearHeader">{{prod.name}} </option>  
+         </select>  
+      
+      
+      
+      <div *ngIf="YearHeader.name">  
+      <!-- <h5>You have selected: {{YearHeader.name}} Year </h5>   -->
+      </div>  
+      </div>  
+      <div>  
+      <!-- <h4>Year Details:</h4>   -->
+      <table class="table table-bordered">  
+      <tr class="yh" >   
+      <!-- <th>S.NO</th> <th>Month</th>  
+      
+      <th> NO of days</th><th>APL</th><th>ACL</th><th>NLM</th><th>EPL</th><th>PLCF</th>
+      <th>APL</th><th>ECL</th><th>CLF</th> <th>Total CO</th><th>NPD</th><th>LP</th><th>NPD</th><th>Remarks</th> -->
+      <td *ngIf="YearHeader.name" style="font-weight: bold;" >  
+       S.NO
+       </td> 
+
+       <td *ngIf="YearHeader.name" >  
+        MONTH
+       </td>
+
+       <td *ngIf="YearHeader.name" >  
+         NO OF DAYS
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+         APL
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+          ACL
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+          NLM
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+          EPL
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+          PLCF
+        </td> 
+
+        <td *ngIf="YearHeader.name" >  
+          APL
+        </td> 
+
+        <td *ngIf="YearHeader.name" >  
+          ECL
+        </td> 
+
+        <td *ngIf="YearHeader.name" >  
+          CLF
+        </td> 
+
+        <td *ngIf="YearHeader.name" >  
+          TOTAL CO
+        </td> 
+
+        <td *ngIf="YearHeader.name" >  
+          NPD
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+          LP
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+          NPD
+        </td> 
+        <td *ngIf="YearHeader.name" >  
+         REMARKS
+        </td> 
+
+
+
+
+
+
+
+
+
+      </tr>  
+      <tr  *ngFor="let Prod of YearDetails; let i=index ">  
+        <td>{{i+1}}</td>
+       
+      <td>{{Prod.month}}</td>  
+      <td></td> 
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      <td></td>  
+      
+      </tr>  
+      
+      </table>  
+      </div>  
+      
+      
+      
+      
+      

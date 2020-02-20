@@ -1,0 +1,600 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+    <form [formGroup]="useForm" (ngSubmit)="onSubmit()"> 
+        <table class="table  table-bordered" >
+    
+                <thead>
+                        <!-- <tr>
+                                <th colspan="4" style="text-align: center;">EARNINGS - A</th>
+                              </tr> -->
+         <tr>
+                    <th class= " table-info" colspan="2" style="text-align: center;" >Enter Personal Details </th>
+                    
+            
+                  </tr>
+                </thead>
+              <tbody>
+                  <tr>
+                    <td>   
+                        <div class="col-sm-4">
+                            <label>Frist Name</label><span>*</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-sm-8">
+                            <input type="text" formControlName="firstname" [(ngModel)]="use.firstname" name="firstname" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.firstname.errors }" />
+                                 <div *ngIf="submitted && f.firstname.errors" class="invalauthor-feedback">
+                                     <div *ngIf="f.firstname.errors.required" style="color:red">First Name is required</div>
+                                     
+                                 </div> 
+                    </div>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>   
+                          <div class="col-sm-4">
+                              <label>Last Name</label><span>*</span>
+                          </div>
+                      </td>
+                      <td>
+                          <div class="col-sm-8">
+                              <input type="text" formControlName="lastname" [(ngModel)]="use.lastname" name="lastname" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.lastname.errors }" />
+                                   <div *ngIf="submitted && f.lastname.errors" class="invalauthor-feedback">
+                                       <div *ngIf="f.lastname.errors.required" style="color:red">Last Name is required</div>
+                                       
+                                   </div> 
+                      </div>
+                      </td>
+                    </tr>
+
+                  <tr>
+                      <td>    
+                          <div class="col-sm-4">
+                            <label>Gender</label><span>*</span>
+                        </div>
+                    </td>
+                    <td>
+                            <div class="col-sm-8">
+                                    <select type="text" [(ngModel)]="use.gender" name="gender" formControlName="gender" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" >
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                   </select>
+    
+                                   <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                                        <div *ngIf="f.gender.errors.required">Gender is required</div>
+                                        
+                                    </div>
+                            </div>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>   
+                          <div class="col-sm-4">
+                              <label>Age</label><span>*</span>
+                          </div>
+                      </td>
+                      <td>
+                          <div class="col-sm-8">
+                              <input type="text" formControlName="age" [(ngModel)]="use.age" name="age" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.age.errors }" />
+                                   <div *ngIf="submitted && f.age.errors" class="invalauthor-feedback">
+                                       <div *ngIf="f.age.errors.required" style="color:red">Age is required</div>
+                                       
+                                   </div> 
+                          </div>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="col-sm-4">
+                                      <label>Date of Birth</label><span>*</span>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="col-sm-8">
+                                      <input type="date" [(ngModel)]="use.dob" name="date" formControlName="dob" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" />
+                                      <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                                        <div *ngIf="f.dob.errors.required">Date is required</div>
+                                      </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td>
+                                <div class="col-sm-4">
+                                        <label>Blood Group</label><span>*</span></div>
+                          </td>
+                          <td>
+                                <div class="col-sm-8">
+                                        <select class="form-control" [(ngModel)]="use.Blood" name="Blood" formControlName="Blood" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Blood.errors }" >
+                                          <option value="O+">O+</option>
+                                          <option value="O-">0-</option>
+                                          <option value="A+">A+</option>
+                                          <option value="A-">A-</option>
+                                          <option value="B+">B+</option>
+                                          <option value="B-">B-</option>
+                                          <option value="AB+">AB+</option>
+                                          <option value="AB-">AB-</option>
+                                        </select>
+                                        <div *ngIf="submitted && f.Blood.errors" class="invalid-feedback">
+                                                <div *ngIf="f.Blood.errors.required">Blood Group is required</div>
+                                        </div>
+                                </div>
+                          </td>
+                        </tr>
+                        
+                  <tr>
+                      <td>    
+                          <div class="col-sm-4">
+                            <label>Marital Status</label><span>*</span>
+                        </div>
+                    </td>
+                    <td>
+                            <div class="col-sm-8">
+                                    <select type="text" [(ngModel)]="use.marital" name="marital" formControlName="marital" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.marital.errors }" >
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                   </select>
+    
+                                   <div *ngIf="submitted && f.marital.errors" class="invalid-feedback">
+                                        <div *ngIf="f.marital.errors.required">Marital Status is required</div>
+                                        
+                                    </div>
+                            </div>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                            <div class="col-sm-4">
+                                    <label>Phone Number</label><span>*</span>
+                            </div>
+                      </td>
+                      <td>
+                            <div class="col-sm-8">
+                                    <input type="text" formControlName="phonenumber" [(ngModel)]="use.phonenumber" name="phonenumber" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.phonenumber.errors }" />
+                                        <div *ngIf="submitted && f.phonenumber.errors" class="invalauthor-feedback">
+                                             <div *ngIf="f.phonenumber.errors.required" style="color:red">Phone number is required</div>
+                                             
+                                        </div> 
+                             </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                            <div class="col-sm-4">
+                                    <label> Email</label><span>*</span>
+                            </div>
+                      </td>
+                      <td>
+                            <div class="col-sm-8">
+                                    <input type="text" formControlName="email" [(ngModel)]="use.email" name="email" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.email.errors }" />
+                                    <div *ngIf="submitted && f.email.errors" class="invalauthor-feedback">
+                                        <div *ngIf="f.email.errors.required" style="color:red">Email is required</div>
+                                        
+                                    </div> 
+                            </div>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                              <div class="col-sm-4">
+                                      <label>Emergency Number</label><span>*</span>
+                              </div>
+                        </td>
+                        <td>
+                              <div class="col-sm-8">
+                                      <input type="text" formControlName="enumber" [(ngModel)]="use.enumber" name="enumber" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.enumber.errors }" />
+                                          <div *ngIf="submitted && f.enumber.errors" class="invalauthor-feedback">
+                                               <div *ngIf="f.enumber.errors.required" style="color:red">Emergency Number is required</div>
+                                               
+                                          </div> 
+                               </div>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td>   
+                              <div class="col-sm-4">
+                                  <label>Permanent Address</label><span>*</span>
+                              </div>
+                          </td>
+                          <td>
+                              <div class="col-sm-8">
+                                  <input type="text" formControlName="paddress" [(ngModel)]="use.paddress" name="paddress" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.paddress.errors }" />
+                                       <div *ngIf="submitted && f.paddress.errors" class="invalauthor-feedback">
+                                           <div *ngIf="f.paddress.errors.required" style="color:red">Permanent Address is required</div>
+                                           
+                                       </div> 
+                          </div>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>   
+                                <div class="col-sm-4">
+                                    <label>Present Address</label><span>*</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-sm-8">
+                                    <input type="text" formControlName="presentaddress" [(ngModel)]="use.presentaddress" name="presentaddress" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.presentaddress.errors }" />
+                                         <div *ngIf="submitted && f.presentaddress.errors" class="invalauthor-feedback">
+                                             <div *ngIf="f.presentaddress.errors.required" style="color:red">Present Address is required</div>
+                                             
+                                         </div> 
+                            </div>
+                            </td>
+                          </tr>
+                    <tr>
+                      <td>
+                            <div class="col-sm-4">
+                                    <label>PAN No</label><span>*</span>
+                            </div>
+                      </td>
+                      <td>
+                            <div class="col-sm-8">
+                                    <input type="text" formControlName="pan" [(ngModel)]="use.pan" name="pan" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.pan.errors }" />
+                                         <div *ngIf="submitted && f.pan.errors" class="invalauthor-feedback">
+                                             <div *ngIf="f.pan.errors.required" style="color:red">PAN No is required</div>
+                                             
+                                         </div> 
+                            </div>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                              <div class="col-sm-4">
+                                      <label>UAN/ PF A/c No</label><span>*</span>
+                              </div>
+                        </td>
+                        <td>
+                              <div class="col-sm-8">
+                                      <input type="text" formControlName="uan" [(ngModel)]="use.uan" name="uan" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.uan.errors }" />
+                                           <div *ngIf="submitted && f.uan.errors" class="invalauthor-feedback">
+                                               <div *ngIf="f.uan.errors.required" style="color:red">UAN/ PF A/c No is required</div>
+                                               
+                                           </div> 
+                              </div>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td>
+                                <div class="col-sm-4">
+                                        <label>Aadhaar No</label><span>*</span>
+                                </div>
+                          </td>
+                          <td>
+                                <div class="col-sm-8">
+                                        <input type="text" formControlName="aadhaar" [(ngModel)]="use.aadhaar" name="aadhaar" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.aadhaar.errors }" />
+                                             <div *ngIf="submitted && f.aadhaar.errors" class="invalauthor-feedback">
+                                                 <div *ngIf="f.aadhaar.errors.required" style="color:red">Aadhaar No is required</div>
+                                                 
+                                             </div> 
+                                </div>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                  <div class="col-sm-4">
+                                          <label>Driving licence number Number</label><span>*</span>
+                                  </div>
+                            </td>
+                            <td>
+                                  <div class="col-sm-8">
+                                          <input type="text" formControlName="licence" [(ngModel)]="use.licence" name="licence" class="form-control" [ngClass]="{ 'is-invalauthor': submitted && f.licence.errors }" />
+                                               <div *ngIf="submitted && f.licence.errors" class="invalauthor-feedback">
+                                                   <div *ngIf="f.licence.errors.required" style="color:red">CTC is required</div>
+                                                   
+                                               </div> 
+                                  </div>
+                            </td>
+                          </tr>
+
+          <tr>
+              <td>
+
+              </td>
+              <td>
+                    <div class="form-group">    
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label></label></div>
+                                <div class="col-sm-2">
+                                <button class="btn btn-info" >Save</button>
+                                </div>
+                            </div>
+                           
+                    </div>
+              </td>
+          </tr>
+          
+     
+        </tbody>
+    </table>  
+</form>    
+ 
+</div>
+<div class="col-sm-3">
+    <label style="color: steelblue; margin-top: 1px;"> PROFILE IMAGE</label>
+ <span style="color: red;">*</span> 
+ 
+    <img [src]="imgURL"  *ngIf="imgURL" >
+    <input #file type="file" accept="image/gif, image/jpeg, image/png" name="file" (change)="preview(file.files)"/>
+ 
+  </div>
+  </div>
+</div>
+        
+
+
+<!--          
+<div class="container" > 
+        <div class="row">
+                <div class="col-sm-6">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="form">
+            <table>
+                    <tr>
+
+                   <td>
+                    <mat-form-field class="form-element" appearance="outline">
+                                    <mat-label>First Name</mat-label>
+                        <input matInput placeholder="Enter Frist Name" formControlName="firstname">
+                        <mat-error *ngIf="!formGroup.controls['firstname'].valid && formGroup.controls['firstname'].touched">
+                                   First Name is required
+                                  </mat-error>
+                      </mat-form-field></td>
+                      <td>
+
+                      <mat-form-field class="form-element" appearance="outline">
+                                    <mat-label>Last Name </mat-label>
+                        <input matInput placeholder="Enter Last Name" formControlName="lastname">
+                        <mat-error *ngIf="!formGroup.controls['lastname'].valid && formGroup.controls['lastname'].touched">
+                                    Last Name is required
+                                   </mat-error>
+                      </mat-form-field></td>
+                      </tr>
+                      <tr>
+
+                                    <td> <mat-form-field class="form-element" appearance="outline">
+                                   <mat-select placeholder="Gender" formControlName="gender">
+                                                    <mat-option ></mat-option>
+                                            <mat-option value="male">Male</mat-option>
+                                            <mat-option value="female">Female</mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="!formGroup.controls['gender'].valid && formGroup.controls['gender'].touched">
+                                                   Gender is required
+                                                   </mat-error>
+                            </mat-form-field></td>
+
+
+                           <td><mat-form-field class="form-element" appearance="outline">
+                                            <mat-label> Age </mat-label>
+                                <input matInput placeholder="Age" formControlName="age">
+                                <mat-error *ngIf="!formGroup.controls['age'].valid && formGroup.controls['age'].touched">
+                                            Age is required
+                                           </mat-error>
+                              </mat-form-field><td>
+                              </tr>
+
+                              <tr>
+                             <td><mat-form-field  class="form-element" appearance="outline">
+                                            <mat-label> Date of Birth</mat-label>
+                                            <input matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="date">
+                                            <mat-error *ngIf="!formGroup.controls['date'].valid && formGroup.controls['date'].touched">
+                                                           Select date of Birth
+                                                           </mat-error>
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                            </mat-form-field></td>
+
+                                         
+
+                                           <td><mat-form-field  class="form-element" appearance="outline">
+                                            <mat-label>Select your blood group</mat-label>
+                                    <mat-select placeholder="Blood group" formControlName="blood" >
+                                            <mat-option value="o">O+</mat-option>
+                                            <mat-option value="onev">O-</mat-option>
+                                            <mat-option value="A">A+</mat-option>
+                                            <mat-option value="Anev">A-</mat-option>
+                                            <mat-option value="B">B+</mat-option>
+                                            <mat-option value="Bnev">B-</mat-option>
+                                            <mat-option value="AB">AB+</mat-option>
+                                            <mat-option value="ABnev">AB-</mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="!formGroup.controls['blood'].valid && formGroup.controls['blood'].touched">
+                                                   Blood group is required
+                                                   </mat-error>
+
+                                </mat-form-field></td>
+                                </tr>
+
+
+                               <tr>
+                                <td><mat-form-field  class="form-element" appearance="outline">
+                                            <mat-select placeholder="Marital Status" formControlName="martial">
+                                                <mat-option value="Yes">Yes</mat-option>
+                                                <mat-option value="No">No</mat-option>
+                                            </mat-select>
+
+                                            <mat-error *ngIf="!formGroup.controls['martial'].valid && formGroup.controls['martial'].touched">
+                                                            martial status  is required
+                                                           </mat-error>
+                                     </mat-form-field></td>
+
+                                     <td><mat-form-field class="form-element" appearance="outline">
+                                                    <mat-label>Phone Number</mat-label>
+                                                    <input matInput placeholder="Phone Number" formControlName="phonenumber">
+                                                    <mat-error *ngIf="!formGroup.controls['phonenumber'].valid && formGroup.controls['phonenumber'].touched">
+                                                                    Required field, must be 10 numbers.
+                                                                  </mat-error>
+                                            </mat-form-field></td>
+                                            </tr>
+
+
+                                          
+    <tr>
+
+      <td><mat-form-field class="form-element" appearance="outline">
+                    <mat-label>email form field</mat-label>
+        <input matInput placeholder="Emailaddress" formControlName="email" >
+        <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
+          {{ getErrorEmail() }}
+        </mat-error>
+      </mat-form-field></td>
+
+      <td><mat-form-field class="form-element" appearance="outline">
+                    <mat-label>Emergency Contact No </mat-label>
+                    <input matInput placeholder="Emergency Contact No " formControlName="emergencynum">
+                    <mat-error *ngIf="!name.valid && name.touched">
+                                  {{titleAlert}}
+                                    </mat-error>
+
+    </mat-form-field></td>
+    </tr>
+
+   <tr>
+    <td><mat-form-field class="form-element" appearance="outline">
+                    <mat-label for ="Permanent">Permanent Address</mat-label>
+                    <input matInput id="Permanent" placeholder="Enter Your Permanent Address" formControlName="permanentaddress">
+                    <mat-error *ngIf="!formGroup.controls['permanentaddress'].valid && formGroup.controls['permanentaddress'].touched">
+                                 permanent address is required
+                                   </mat-error>
+
+    </mat-form-field></td>
+
+    <td><mat-form-field class="form-element" appearance="outline">
+                    <mat-label for="Present">Present Address</mat-label>
+                    <input matInput placeholder="Enter Your Present Address"  formControlName="presentaddress">
+                    <mat-error *ngIf="!formGroup.controls['presentaddress'].valid && formGroup.controls['presentaddress'].touched">
+                                    present address is required
+                                   </mat-error>
+                   
+     </mat-form-field></td>
+    </tr>
+     
+    <tr>
+     <td><mat-form-field class="form-element" appearance="outline">
+                    <mat-label>PAN  Card No</mat-label>
+                   
+                    <input matInput placeholder="Enter Your Pan Card No "  formControlName="pannumber">
+
+                    <mat-error *ngIf="!formGroup.controls['pannumber'].valid && formGroup.controls['pannumber'].touched">
+                        Required field, must be 10 numbers.
+                                   </mat-error>
+            </mat-form-field></td>
+            <td>
+                <!-- <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+                <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+                <mat-error *ngIf="!formGroup.controls['file2'].valid && formGroup.controls['file2'].touched">
+                   required field
+                   </mat-error>  --IMAGE
+                 </td>
+      </tr>
+      <tr>
+          <td><mat-form-field class="form-element" appearance="outline">
+              <mat-label>UAN / PF A/c No</mat-label>
+             
+              <input matInput placeholder="Enter Your Pan Card No "  formControlName="uan">
+        
+              <mat-error *ngIf="!formGroup.controls['uan'].valid && formGroup.controls['uan'].touched">
+                  Required field, must be 12 numbers.
+                             </mat-error>
+      </mat-form-field></td>
+      <td>
+<!--     
+            <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+            <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+          <mat-error *ngIf="!formGroup.controls['file1'].valid && formGroup.controls['file1'].touched">
+              required field
+              </mat-error>
+                               --IMAGE
+                           </td>
+     
+      </tr>
+            <tr>
+          <td><mat-form-field class="form-element" appearance="outline">
+              <mat-label>Aadhar  Card No</mat-label>
+             
+              <input matInput placeholder="Enter Your Aadhar Card No  "  formControlName="adharnumber">
+        
+              <mat-error *ngIf="!formGroup.controls['adharnumber'].valid && formGroup.controls['adharnumber'].touched">
+                  Required field, must be 12 numbers.
+                             </mat-error>
+      </mat-form-field></td>
+      <td>
+    
+            <!-- <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+            <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+          <mat-error *ngIf="!formGroup.controls['file'].valid && formGroup.controls['file'].touched">
+              required field
+              </mat-error> --
+                              IMAGE
+                           </td>
+     
+      </tr>
+      <tr>
+          <td><mat-form-field class="form-element" appearance="outline">
+              <mat-label>Driving licence  Card No</mat-label>
+             
+              <input matInput placeholder="Enter Your Driving licence Card No "  formControlName="drivinglicense">
+
+              <mat-error *ngIf="!formGroup.controls['drivinglicense'].valid && formGroup.controls['drivinglicense'].touched">
+                  Required field, must be 16 numbers.
+                             </mat-error>
+      </mat-form-field></td>
+
+      <td>
+        <!-- <input #file type="file" [hidden]="true" accept="image/*" (change)="upload(file.files)">
+        <button mat-raised-button color="accent" #upload (click)="file.click()">Upload file</button> 
+          <mat-error *ngIf="!formGroup.controls['file3'].valid && formGroup.controls['file3'].touched">
+              required field
+              </mat-error> --IMAGE
+                                
+                           </td>
+     
+      </tr>
+  
+      <!-- <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="button">Save</button>
+      </div> --
+    </table>
+    </form>
+  </div>
+   <div class="col-sm-3">
+        <label style="color: steelblue; margin-top: 1px;"> PROFILE IMAGE</label>
+        <!-- <span style="color: red;">*</span> -->
+        <!-- <div >
+        <img [src]="imgURL"  height="150" width="150" style="border: 1px solid black;" *ngIf="imgURL" >
+        <input #file type="file" accept="image/gif, image/jpeg, image/png" name="file" (change)="preview(file.files)"/>
+      </div> -
+    </div>
+  </div>
+        <!-- <div class="col-sm-3">
+          <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h5 class="card-title">Login Details</h5>
+                            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> --
+                            <div class="card-text">
+                                          <div *ngFor="let use of user">
+
+                                                          <p>User Id: {{use.username}}</p>
+                                                          <!-- <p>Password : {{use.password}}</p> --
+                                           </div>
+                          </div>
+<!--                       
+                            <a href="#" class="card-link">Another link</a> --
+                          </div>
+                        </div>
+ 
+</div> --
+
+<table class="table table-bordered" style="margin-top:10px;" >
+            
+  <button  class="btn btn-outline-info" (click)="selectNext1(matgroup)"  style="margin-left:250px;">PREVIOUS</button>
+
+  <button class="btn btn-outline-info" style="margin-left:10px;" routerLink="/joining/personal/edit-personal-details" >EDIT</button>
+
+  <button  class="btn btn-outline-primary"   style="margin-left:10px;">APPROVE</button>
+  <button  class="btn btn-outline-danger"   style="margin-left:10px;">REJECT</button>
+    <button  class="btn btn-outline-info" (click)="selectNext(matgroup)"  style="margin-left:10px;" >NEXT</button>
+ 
+  </table> -->

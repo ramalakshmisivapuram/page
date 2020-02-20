@@ -1,0 +1,203 @@
+<mat-sidenav-container fullscreen>
+  
+    <mat-sidenav mode="side" #sidenav opened position="start">
+        <img src="assets/img/download.png" >
+        <ul>
+          
+     <li><a routerLink="/home-tabs" >COMPANY PROFILE</a></li>
+     <li><a routerLink="/hr-details">EMPLOYEES</a></li>
+     <li><a routerLink="/joining-tabs" >PERSONAL PROFILE</a></li>
+     <li><a routerLink="/attendence" >PROFESSIONAL PROFILE</a></li>
+     <li><a href="" >DEPARTMENT</a></li>
+     <li><a href="" >SEPARATION</a></li>
+     <li><a href="" >TICKET</a></li>
+<!--     
+     <li><a routerLink="/payslip" >PAYROLL</a></li>
+     <li><a href="" >APPOINTMENT</a></li>
+     <li><a routerLink="/salary" > PAYSLIP COMPONENT </a></li>
+     <li><a href="" >APPRISAL</a></li>
+     <li><a href="" >SEPARATION</a></li>
+     <li><a href="" >RELIVING</a></li>
+   -->
+     
+    </ul>
+  
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar style="background-color: #08849C;" >
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon style="color: white;">menu</mat-icon>
+        </button>
+        <h6 style="color: white;">
+         
+          ENVISION INTEGRATED SERVICES PVT.LTD </h6>
+ 
+
+        <!-- <span class="toolbar-spacer"></span>
+        <button mat-raised-button style="background-color:white;"
+  matBadge="3" matBadgePosition="after" matBadgeColor="accent">
+NOTIFICATIONS
+</button>
+<button  routerLink="/login "  mat-raised-button style=margin-left:10px; >
+LOGIN
+</button> -->
+<button  routerLink="/login"  mat-raised-button style="margin-left:580px;background-color: #08849C;" >
+  LOGOUT
+  </button>
+<span class="toolbar-spacer"></span>
+       
+      </mat-toolbar>
+      <div class="main-content" style="margin-top:60px;"> 
+    <h5 style="color:red">ACCEPTANCE</h5>                        
+<table class="table table-bordered ">
+
+    <tbody>
+        <tr>
+             <th  colspan="1"> <mat-label for="relocate"> Are you willing to relocate ?</mat-label> </th>
+                <mat-radio-group>
+                <td>
+                <mat-radio-button value="Yes"> Yes</mat-radio-button></td>
+                <td>
+                <mat-radio-button value="No" > No</mat-radio-button> </td>
+                  </mat-radio-group>
+        </tr>
+    </tbody>
+     
+            <tbody>
+              <tr>
+                <th><mat-label for="current">Do you have any bond/Service agreement with your current employer ?</mat-label> </th>
+             
+                <mat-radio-group>
+                  <td>
+                    <mat-radio-button value="Yes"> Yes</mat-radio-button> </td>
+                    <td>
+                   <mat-radio-button value="No"> No</mat-radio-button></td>
+                </mat-radio-group>
+                </tr>
+            </tbody>
+            
+            <tbody>
+                <tr>
+                  <th><mat-label for="week">. Are you willing to work six days a week ?</mat-label> </th>
+               
+                  <mat-radio-group>
+                    <td>
+                      <mat-radio-button value="Yes"> Yes</mat-radio-button> </td>
+                      <td>
+                     <mat-radio-button value="No"> No</mat-radio-button></td>
+                  </mat-radio-group>
+                  </tr>
+              </tbody>
+              
+                      <tbody>
+                          <tr>
+                            <th><mat-label for="past"> Have you ever absconded from any of your past employers ?</mat-label> </th>
+                         
+                            <mat-radio-group>
+                              <td>
+                                <mat-radio-button value="Yes"> Yes</mat-radio-button> </td>
+                                <td>
+                               <mat-radio-button value="No"> No</mat-radio-button></td>
+                            </mat-radio-group>
+                            </tr>
+                          </tbody>
+                            <tbody>
+                                <tr>
+                                  <th><mat-label for="criminal"> Do you have any criminal cases/police case against you ?</mat-label> </th>
+                               
+                                  <mat-radio-group>
+                                    <td>
+                                      <mat-radio-button value="Yes"> Yes</mat-radio-button> </td>
+                                      <td>
+                                     <mat-radio-button value="No"> No</mat-radio-button></td>
+                                  </mat-radio-group>
+                                  </tr>
+                              </tbody>
+                             
+                                  <tbody>
+                                      <tr><th><mat-label for="relatives">Do you have any of your relatives working currently with EIS Pvt. Ltd ?</mat-label> </th>
+                                     
+                                        <mat-radio-group>
+                                          <td>
+                                            <mat-radio-button value="Yes"> Yes</mat-radio-button> </td>
+                                            <td>
+                                           <mat-radio-button value="No"> No</mat-radio-button></td>
+                                        </mat-radio-group>
+                                        </tr>
+                                    </tbody>
+                            
+                  <tbody>
+                      <tr>
+                        <th><mat-label for="pre-existing"> Do you have any pre-existing medical illness ?</mat-label> </th>
+                     
+                        <mat-radio-group>
+                          <td>
+                            <mat-radio-button value="Yes"> Yes</mat-radio-button> </td>
+                            <td>
+                           <mat-radio-button value="No"> No</mat-radio-button></td>
+                        </mat-radio-group>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                          <th><mat-label for="eis">Have you ever appeared for the EIS Pvt. Ltd Selection Process?</mat-label> </th>
+                       
+                          <mat-radio-group>
+                            <td>
+                              <mat-radio-button value="Yes"> Yes</mat-radio-button> </td>
+                              <td>
+                             <mat-radio-button value="No"> No</mat-radio-button></td>
+                          </mat-radio-group>
+                          </tr>
+                      </tbody>
+                     
+                         
+                           
+                             
+                                
+                                 
+                                    
+                                     
+                                       
+                                          <tbody>
+                                              <tr>
+                                                <th>
+                                                    <mat-label for="date and result">If yes: please specify date of interview & the result ?</mat-label> </th>
+                                             <td>
+                                                <mat-form-field>
+                                                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                    <mat-datepicker #picker></mat-datepicker>
+                                                  </mat-form-field>
+                                                  </td> 
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+    <tbody>
+          <th  colspan="3"><h3>Declaration: </h3>  </th>
+        </tbody>
+           <p>I, Certified that the particulars given by me in foregoing above are true, complete and to the best of my knowledge & belief. If any of this information is found to be false/ incomplete/ incorrect, the company can cancel my appointment letter or terminate my employment service contract/employment.
+              I have/have not undergone pre-employment medical checkup in past.</p>
+  
+  
+              <div class="mat-subheading-2" >For Envision Integrated Services Private Limited </div>
+     
+  </table> 
+  
+  <table class="table table-bordered" style="margin-top:10px;" >
+          
+    <button  class="btn btn-outline-info" (click)="selectNext1(matgroup)"  style="margin-left:450px;">PREVIOUS</button>
+   
+    
+    <button  class="btn btn-outline-success"  style="margin-left:10px;" >SAVE</button>
+    
+ 
+    
+      <button  class="btn btn-outline-info" (click)="selectNext(matgroup)"  style="margin-left:10px;" >NEXT</button>
+   
+    </table>
+   </div>
+   </mat-sidenav-content>
+   </mat-sidenav-container>
+   

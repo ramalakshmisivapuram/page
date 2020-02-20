@@ -1,0 +1,136 @@
+
+
+
+
+
+             <div>
+                 
+              <table class="TFtable">  
+
+                  
+                <tr >   
+                
+                <th>NAME</th><th>RELATIONSHIP </th>  <th>D.O.B</th>  <th>AGE</th> <th>OCCUPATION</th> <th>CONTACT</th> 
+               
+                 <!-- <th><button mat-raised-button   style="background-color: #3AB1CF; color: white; margin-right:3px;" (click)="addrelationship()">ADD</button>
+                  </th>
+                  <th><button mat-raised-button   color="warn" (click)="removerelationship(i)">REMOVE</button></th>  -->
+                </tr>  
+                
+                <tr  *ngFor="let relationship of relationship; let i = index;">  
+               
+             
+                <td><input type="text"  [(ngModel)]="relationship.name"  name="name"></td>  
+                <td><input type="text"   [(ngModel)]="relationship.relation"  name="relation"></td>  
+                
+                <td><input type="text" [(ngModel)]="relationship.dob"  name="dob"></td>
+                <td><input type="text"  [(ngModel)]="relationship.age" name="age"></td>  
+
+
+                <td><input type="text" [(ngModel)]="relationship.occuption" name="occuption" ></td>
+                <td><input type="text" [(ngModel)]="relationship.contact" name="contact" ></td>
+              
+              
+              
+                
+                
+                </tr>  
+                
+                </table> 
+               
+            </div>
+            <table class="table table-bordered" style="margin-top:10px;" >
+            
+              <button  class="btn btn-outline-info" (click)="selectNext1(matgroup)"  style="margin-left:250px;">PREVIOUS</button>
+
+
+              <button class="btn btn-outline-info" style="margin-left:10px;" routerLink="/joining/family/edit-family-details">EDIT</button>
+ 
+              <button  class="btn btn-outline-primary"   style="margin-left:10px;">APPROVE</button>
+              <button  class="btn btn-outline-danger"   style="margin-left:10px;">REJECT</button>
+                <button  class="btn btn-outline-info" (click)="selectNext(matgroup)"  style="margin-left:10px;" >NEXT</button>
+             
+              </table>
+             
+
+        
+              <!-- <table  >
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>RELATIONSHIP</th>
+                        <th>D.O.B</th>
+                        <th>AGE</th>
+                        <th>OCCUPATION</th>
+                        <th>CONTACT</th>
+                        <th>ACTION</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let field of fieldArray; let i = index">
+                        <td>
+                            <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" />
+                        </td>
+                        <td>
+                            <input [(ngModel)]="field.relation" class="form-control" type="text" name="{{field.relation}}" />
+                        </td>
+                        <td>
+                            <input [(ngModel)]="field.dob" class="form-control" type="text" name="{{field.dob}}" />
+                        </td>
+                        <td>
+                          <input [(ngModel)]="field.age" class="form-control" type="text" name="{{field.age}}" />
+                      </td>
+
+                        <td>
+                          <input [(ngModel)]="field.occupation" class="form-control" type="text" name="{{field.occupation}}" />
+                      </td>
+                      <td>
+                        <input [(ngModel)]="field.contact" class="form-control" type="text" name="{{field.contact}}" />
+                    </td>
+
+
+                    
+
+
+                        <td>
+                            <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)"> 
+                              <span class="glyphicon glyphicon-trash"  style="color:red"></span> 
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="text" id="newAttributeName" [(ngModel)]="newAttribute.name" name="newAttributeName" />
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" id="newAttributeRelation" [(ngModel)]="newAttribute.relation" name="newAttributeRelation" />
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" id="newAttributeDob" [(ngModel)]="newAttribute.dob" name="newAttributeDob" />
+                        </td>
+                        <td>
+                          <input class="form-control" type="text" id="newAttributeAge" [(ngModel)]="newAttribute.age" name="newAttributeAge" />
+                      </td>
+                        <td>
+                          <input class="form-control" type="text" id="newAttributeOccupation" [(ngModel)]="newAttribute.occupation" name="newAttributeOccupation" />
+                      </td>
+                      <td>
+                        <input class="form-control" type="text" id="newAttributeContact" [(ngModel)]="newAttribute.contact" name="newAttributeContact" />
+                    </td>
+                   
+
+
+                        <td>
+                            <button class="btn btn-default" type="button" (click)="addFieldValue()"> <span class="glyphicon glyphicon-plus" style="color:green"></span></button>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+            <button class="btn btn-info" style="float:right;margin-top:10px;">SAVE</button>
+  
+
+
+
+             -->
