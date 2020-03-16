@@ -71,7 +71,7 @@
               <th scope="col">Balance Amount Item</th>
               <th scope="col">Test Amount</th>
               <th scope="col">Action</th>
-              <th> <button  style=" background-color:rgb(16, 199, 223); float: right; margin-left: 10px; margin-bottom: 10px;" mat-raised-button color="primary" routerLink="/formula-salary">New</button> </th>
+              <!-- <th> <button  style=" background-color:rgb(16, 199, 223); float: right; margin-left: 10px; margin-bottom: 10px;" mat-raised-button color="primary" routerLink="/formula-salary">New</button> </th> -->
           </tr>
               <tbody>
                 <tbody *ngFor="let salf of formulas index as i">
@@ -94,6 +94,12 @@
               </tbody>
             </table>
             </div> 
+
+            <table>
+              <button  class="btn btn-outline-info" (click)="selectNext1(matgroup)" style="margin-top:10px ">PREVIOUS</button>
+              <button  class="btn btn-outline-info" (click)="selectNext(matgroup)" style="margin-top: 10px; margin-left: 10px; ">NEXT</button>
+              <button   class="btn btn-outline-info"style="float: right; margin-left: 10px;margin-top:10px; "routerLink="/formula-salary">New</button> 
+            </table>
 <!-- 
   </mat-sidenav-content>
   </mat-sidenav-container> -->

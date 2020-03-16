@@ -307,7 +307,7 @@
 
               </td>
               <td>
-                    <div class="form-group">    
+                    <!-- <div class="form-group">    
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label></label></div>
@@ -316,56 +316,25 @@
                                 </div>
                             </div>
                            
-                    </div>
+                    </div> -->
               </td>
           </tr>
           
      
         </tbody>
     </table>  
+    
+    <table>
+        <button  class="btn btn-outline-info" (click)="selectNext1(matgroup)" style="margin-top:10px ">PREVIOUS</button>
+        <button  class="btn btn-outline-info" (click)="selectNext(matgroup)" style="margin-top: 10px; margin-left: 10px; ">NEXT</button>
+       
+         <button class="btn btn-outline-info" style="margin-top: 10px; margin-left: 10px; " >Save</button>
+                 
+     
+               
+  
+      </table>
 </form>    
 </div>
 
 
-<!-- <div class="container">
-        <div class="col-md-6">
-                <h2 class="text-center">Add Employee</h2>
-                <form>
-                        <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="name" [(ngModel)]="user.name" placeholder="Name" name="name"
-                                        class="form-control" id="name">
-                        </div>
-
-                        <div class="form-group">
-                                <label for="designation">Designation:</label>
-                                <input [(ngModel)]="user.designation" placeholder="Designation" name="designation"
-                                        class="form-control" id="designation">
-                        </div>
-
-                        <div class="form-group">
-                                <label for="empId">Employee Id</label>
-                                <input [(ngModel)]="user.empId" placeholder="Employee Id" name="Employee Id"
-                                        class="form-control" id="employeeid">
-                        </div>
-                        <div class="form-group">
-                                <label for="salary">Employee Salary</label>
-                                <input [(ngModel)]="user.salary" placeholder="Employee Salary" name="Employee Salary"
-                                        class="form-control" id="employeesalary">
-                        </div>
-
-                        <div class="form-group">
-                                <label for="workpattern">Work pattern</label>
-                                <input [(ngModel)]="user.workpattern" placeholder="Employee workpattern"
-                                        name="Employee workpattern" class="form-control" id="employeeworkpattern">
-                        </div>
-                        <div class="form-group">
-                                <label for="officialmail">Official Mail</label>
-                                <input [(ngModel)]="user.officialmail" placeholder="Employee officialmail"
-                                        name="Employee officialmail" class="form-control" id="employeeofficialmail">
-                        </div>
-
-                        <button class="btn btn-success" (click)="createEmployee()">Create</button>
-                </form>
-        </div>
-</div> -->
